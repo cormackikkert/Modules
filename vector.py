@@ -27,7 +27,7 @@ class Vector2d:
         elif isinstance(other, Number):
             return Vector2d(self.x * other, self.y * other)
         else:
-            raise ValueError("Vectors can only be multiplied by a number or another vector")
+            raise AssertionError("Vectors can only be multiplied by a number or another vector")
         
     def __iadd__(self, other):
         assert isinstance(other, Vector2d), "Only vectors can be added to vectors"
