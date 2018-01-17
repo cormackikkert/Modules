@@ -44,7 +44,6 @@ def draw_line(sx, sy, ex, ey, b=9):
         
 def draw_polygon(*points):
     for p1, p2 in zip(points, list(points[1:])+[points[0]]):
-        print(p1, p2)
         draw_line(p1[0], p1[1], p2[0], p2[1])
     sx = int(sum(p[0] for p in points) / len(points) + 0.5)
     sy = int(sum(p[1] for p in points) / len(points) + 0.5)
